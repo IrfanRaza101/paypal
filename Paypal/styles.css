@@ -1,0 +1,430 @@
+.containers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1.12fr 60px 0.01fr 1fr 0.3fr 1fr 0.1fr;
+  gap: 0px 0px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1600px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navs"
+    "main"
+    "text-section"
+    "section-1"
+    "section-2"
+    "Responding-to-the-Coronavirus"
+    "countdown"
+    "footer";
+}
+
+.navs {
+  grid-area: navs;
+}
+
+.main {
+  grid-area: main;
+}
+
+.text-section {
+  grid-area: text-section;
+  margin-top: 250px;
+}
+
+.section-1 {
+  grid-area: section-1;
+}
+
+.section-2 {
+  grid-area: section-2;
+}
+
+.Responding-to-the-Coronavirus {
+  grid-area: Responding-to-the-Coronavirus;
+}
+
+.countdown {
+  grid-area: countdown;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #ffffff;
+  padding: 15px 30px;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sizing {
+  width: 1200px;
+  background-color: #ffffff;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  all: unset;
+}
+.logo img {
+  height: 25px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li span {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+nav ul li a:hover {
+  color: #0070ba;
+}
+
+/* Responsive Design */
+@media (max-width: 990px) {
+  .sizing {
+    width: 100%;
+    max-width: 1600px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-video {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  z-index: -1;
+  width: 100%;
+  height: 800px;
+}
+@media (min-width: 1600px) {
+  .main-video {
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: -750px;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+  }
+}
+
+@media (max-width: 965px) {
+  .main-video {
+    right: 0;
+    left: 0;
+    margin-top: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 666px) {
+  .main-video {
+    bottom: 200px;
+    z-index: -1;
+    width: 650px;
+    height: auto;
+  }
+}
+
+.hero h1 {
+  width: 600px;
+  font-size: 2.5em;
+  margin-top: -50px;
+}
+
+.hero button {
+  background-color: #f8be00;
+  color: #0024c5;
+  padding: 15px 100px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+
+/* text-section */
+
+.text-section {
+  margin: 0 auto;
+}
+.text-section p {
+  margin-top: 15px;
+  text-align: center;
+}
+.text-section button {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* Section 1 */
+
+.section-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+  margin: 150px auto 0;
+  background-color: #ffffff;
+}
+
+.text-content {
+  padding: 20px;
+}
+
+.text-content h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.download-link {
+  color: #0070ba;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+.image-content {
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-1 {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  .section-2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+  .text-content {
+      padding: 20px 0;
+  }
+
+  .image-content {
+      padding-top: 20px;
+  }
+}
+
+
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* Testimonials Section */
+
+/* countdown section*/
+
+.countdown {
+  padding: 30px;
+}
+.countdown p {
+  color: #fff;
+  font-size: 24px;
+  width: 70%;
+}
+
+.countdown .numbers {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+.countdown .numbers .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer-links,
+.footer-info,
+.footer-bottom {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #181818;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-info a {
+  color: #383838;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a {
+  color: #383838;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #4d4d4d;
+}
+
+.footer-info a:hover,
+.footer-bottom a:hover {
+  color: #000000;
+}
+
+.footer-bottom {
+  align-items: end;
+  justify-content: end;
+  flex-wrap: wrap;
+  margin-top: -20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+footer img.country-flag {
+  position: relative;
+  width: 40px;
+  margin: -20px 0 -20px auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #464646;
+  margin: 20px 0;
+}
+
+@media (max-width: 1100px) {
+  footer img.country-flag {
+    position: absolute;
+    width: 40px;
+    margin: -50px 0 0px 0px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+}
